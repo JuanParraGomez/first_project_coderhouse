@@ -1,14 +1,51 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script  defer src="script.js"></script>
-        <title>Select Your Champion</title>
+<html lang="es" data-theme="light"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer type="module" src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Champion VS</title>
+    <style>
+        /* Personalización de colores específicos */
+        .border-blue-custom { border-color: #0070f3; }
+        .border-yellow-custom { border-color: #facc15; }
+        .text-blue-custom { color: #0070f3; }
+        .text-yellow-custom { color: #facc15; }
+    </style>
+</head>
+<body class="bg-white min-h-screen p-8 text-slate-800">
+
+    <header class="text-center mb-10">
+        <h1 class="text-4xl font-black text-blue-custom uppercase tracking-widest">Champions VS</h1>
+        <p class="text-slate-400 font-bold">Compara a tus campeones</p>
+    </header>
+
+    <div class="flex flex-col lg:flex-row items-start justify-center gap-8">
         
-    </head>
-    <body>
-        <h1>Welcome to Select Your Champion</h1>
-        <p>This is a simple champion selection web page.</p>
-    </body>
+        <div id="card1" class="flex flex-col gap-4 items-center bg-white p-6 rounded-2xl shadow-lg border-2 border-blue-custom w-96 min-h-[550px]">
+            <div class="flex flex-col gap-2 w-full">
+                <select id="rol1" class="select border-blue-custom focus:border-blue-custom w-full bg-white"></select>
+                <select id="cham1" class="select border-blue-custom focus:border-blue-custom w-full bg-white"></select>
+            </div>
+            
+            <div id="cham1rol1" class="w-full"></div>
+        </div>
+
+        <div class="flex flex-col items-center justify-center self-center">
+            <div class="text-7xl font-black italic text-blue-custom opacity-30">VS</div>
+            <div class="divider lg:divider-horizontal before:bg-blue-custom after:bg-blue-custom"></div> 
+        </div>
+
+        <div id="card2" class="flex flex-col gap-4 items-center bg-white p-6 rounded-2xl shadow-lg border-2 border-blue-custom w-96 min-h-[550px]">
+            <div class="flex flex-col gap-2 w-full">
+                <select id="rol2" class="select border-blue-custom w-full bg-white"></select>
+                <select id="cham2" class="select border-blue-custom w-full bg-white"></select>
+            </div>
+            <div id="cham2rol2" class="w-full"></div>
+        </div>
+
+    </div>
+</body>
 </html>
