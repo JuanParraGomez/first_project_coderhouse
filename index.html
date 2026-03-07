@@ -6,6 +6,7 @@
     <script defer type="module" src="script.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Champion VS</title>
     <style>
         /* Personalización de colores específicos */
@@ -33,8 +34,9 @@
             <div id="cham1rol1" class="w-full"></div>
         </div>
 
-        <div class="flex flex-col items-center justify-center self-center">
+        <div class="flex flex-col items-center justify-center self-center gap-4">
             <div class="text-7xl font-black italic text-blue-custom opacity-30">VS</div>
+            <button id="btnComparar" class="btn bg-blue-custom text-white font-bold text-lg hover:opacity-80 border-none" disabled>⚔️ Comparar</button>
             <div class="divider lg:divider-horizontal before:bg-blue-custom after:bg-blue-custom"></div> 
         </div>
 
@@ -47,5 +49,17 @@
         </div>
 
     </div>
+
+    <div id="resultadoComparacion" class="max-w-4xl mx-auto mt-10"></div>
+
+    <div class="max-w-4xl mx-auto mt-10">
+        <h2 class="text-2xl font-bold text-blue-custom mb-4">📜 Historial de comparaciones</h2>
+        <div id="historial" class="flex flex-wrap gap-4"></div>
+    </div>
+
+    <footer class="text-center mt-16 mb-8 text-slate-400 text-sm">
+        <p>Champions VS — Proyecto Final</p>
+    </footer>
+
 </body>
 </html>

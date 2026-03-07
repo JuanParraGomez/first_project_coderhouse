@@ -6,7 +6,6 @@ const path_api = "https://ddragon.leagueoflegends.com";
         const data = await response.json();
         return data[0];
     } catch (error) {
-        console.error("Error de tipo: ", error);
         return null;
     }
 }
@@ -31,7 +30,6 @@ async function getChampions(rol) {
             return champions;
         }
     } catch (error) {
-        console.error("Error de tipo: ", error);
         return null;
 }
 }
@@ -43,10 +41,8 @@ async function getChampion(name){
         const url = `https://ddragon.leagueoflegends.com/cdn/${version}/data/es_ES/champion/${name}.json`;
         const response = await fetch(url);
         const data = await response.json();
-        console.log(data)
         return data.data;
     } catch (error) {
-        console.error("Error de tipo: ", error);
         return null;
     }
 }
@@ -74,7 +70,7 @@ async function getRoles(name){
         }
         return roles;
     }catch (error){
-        console.error("Error de tipo: ", error);
+        return [];
     }
 }
 
