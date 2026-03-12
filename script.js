@@ -1,7 +1,6 @@
 import { getChampions, getRoles , getChampion } from "./service.js";
 
-
-var roles = await getRoles();
+let roles = await getRoles();
 
 let championsVsName = {
                         'rol1':{
